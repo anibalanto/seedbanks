@@ -11,4 +11,6 @@ import java.util.List;
 public interface HarvestRepository extends JpaRepository<Harvest,Long>{
 
 	List<Harvest> findAllByFarmerLogin(String login);
+
+    List<Harvest> findAllByVarietyIdAndSharedIsTrue(Long id);
 }

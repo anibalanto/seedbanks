@@ -1,7 +1,10 @@
 package org.communityfarmer.seedbanks.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+import org.communityfarmer.seedbanks.domain.Harvest;
 import org.communityfarmer.seedbanks.domain.Variety;
+import org.communityfarmer.seedbanks.repository.HarvestRepository;
+import org.communityfarmer.seedbanks.repository.UserRepository;
 import org.communityfarmer.seedbanks.repository.VarietyRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +28,9 @@ public class VarietyResource {
 
     @Inject
     private VarietyRepository varietyRepository;
+
+    @Inject
+    private HarvestRepository harvestRepository;
 
     /**
      * POST  /varietys -> Create a new variety.
@@ -64,6 +70,19 @@ public class VarietyResource {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(variety, HttpStatus.OK);
+    }
+
+
+    /**
+     * GET  /varietys/:id -> get the "id" variety.
+     */
+    @RequestMapping(value = "/varietys/{id}/harvests",
+        method = RequestMethod.GET,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public List<Harvest> getHarvestsByVariety(@PathVariable Long id, HttpServletResponse response) {
+        log.debug("REST request to get Harvests shareds by Variety");
+        return harvestRepository.findAllByVarietyIdAndSharedIsTrue(id);
     }
 
     /**
