@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "baseName": "seedbanks",
+    "packageName": "org.communityfarmer.seedbanks",
+    "packageFolder": "org/communityfarmer/seedbanks",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "7",
+    "rememberMeKey": "5b241db33ed13fb5b9a7b4428a782f482ba8a0f5"
+  }
+}

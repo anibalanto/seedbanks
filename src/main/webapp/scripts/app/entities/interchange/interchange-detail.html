@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="seedbanksApp.interchange.detail.title">Interchange</span> {{interchange.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="seedbanksApp.interchange.score">Score</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{interchange.score}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="seedbanksApp.interchange.state">State</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{interchange.state}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="seedbanksApp.interchange.farmerReciever">farmerReciever</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{interchange.farmerReciever.login}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="seedbanksApp.interchange.harvest">harvest</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{interchange.harvest.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="interchange"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

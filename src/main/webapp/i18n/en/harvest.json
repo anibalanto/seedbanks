@@ -1,0 +1,24 @@
+{
+    "seedbanksApp": {
+        "harvest" : {
+            "home": {
+                "title": "Harvests",
+                "createLabel": "Create a new Harvest",
+                "createOrEditLabel": "Create or edit a Harvest"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Harvest {{ id }}?"
+            },
+            "detail": {
+                "title": "Harvest"
+            },
+            "codeValidator": "CodeValidator",
+            "date": "Date",
+            "shared": "Shared",
+            "farmer": "farmer",
+            "mother": "mother",
+            "interchange": "interchange",
+            "variety": "variety"
+        }
+    }
+}

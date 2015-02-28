@@ -1,0 +1,19 @@
+{
+    "seedbanksApp": {
+        "variety" : {
+            "home": {
+                "title": "Varietys",
+                "createLabel": "Create a new Variety",
+                "createOrEditLabel": "Create or edit a Variety"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Variety {{ id }}?"
+            },
+            "detail": {
+                "title": "Variety"
+            },
+            "name": "Name",
+            "harvest": "harvest"
+        }
+    }
+}

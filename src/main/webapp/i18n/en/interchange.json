@@ -1,0 +1,21 @@
+{
+    "seedbanksApp": {
+        "interchange" : {
+            "home": {
+                "title": "Interchanges",
+                "createLabel": "Create a new Interchange",
+                "createOrEditLabel": "Create or edit a Interchange"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Interchange {{ id }}?"
+            },
+            "detail": {
+                "title": "Interchange"
+            },
+            "score": "Score",
+            "state": "State",
+            "farmerReciever": "farmerReciever",
+            "harvest": "harvest"
+        }
+    }
+}

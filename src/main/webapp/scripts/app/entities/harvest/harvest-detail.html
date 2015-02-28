@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="seedbanksApp.harvest.detail.title">Harvest</span> {{harvest.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="seedbanksApp.harvest.codeValidator">CodeValidator</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{harvest.codeValidator}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="seedbanksApp.harvest.date">Date</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{harvest.date}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="seedbanksApp.harvest.shared">Shared</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{harvest.shared}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="seedbanksApp.harvest.farmer">farmer</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{harvest.farmer.login}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="seedbanksApp.harvest.mother">mother</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{harvest.mother.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="seedbanksApp.harvest.variety">variety</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{harvest.variety.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="harvest"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
