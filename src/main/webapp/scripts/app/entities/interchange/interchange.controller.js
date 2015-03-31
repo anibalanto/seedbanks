@@ -28,6 +28,22 @@ angular.module('seedbanksApp')
             });
         };
 
+        $scope.calificate = function (id) {
+            Interchange.get({id: id}, function(result) {
+                $scope.interchange = result;
+                $('#saveCalificateInterchangeModal').modal('show');
+            });
+        };
+
+        $scope.updateCalificate = function () {
+            Interchange.save($scope.interchange,
+                function () {
+                    $scope.loadAll();
+                    $('#saveCalificateInterchangeModal').modal('hide');
+                    $scope.clear();
+                });
+        };
+
         $scope.delete = function (id) {
             Interchange.get({id: id}, function(result) {
                 $scope.interchange = result;
