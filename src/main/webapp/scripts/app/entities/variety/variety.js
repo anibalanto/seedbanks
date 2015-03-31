@@ -39,6 +39,7 @@ angular.module('seedbanksApp')
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('variety');
+                        $translatePartialLoader.addPart('harvest');
                         return $translate.refresh();
                     }]
                 }

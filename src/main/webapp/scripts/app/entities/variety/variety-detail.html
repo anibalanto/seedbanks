@@ -20,6 +20,113 @@
                 </tr>
             </tbody>
         </table>
+
+        <div class="modal fade" id="saveInterchangeModal" tabindex="-1" role="dialog" aria-labelledby="myInterchangeLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form name="editForm" role="form" novalidate
+                          class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+                          ng-submit="create()">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                    ng-click="clear()">&times;</button>
+                            <h4 class="modal-title" id="myInterchangeLabel" translate="seedbanksApp.interchange.home.createOrEditLabel">Create or edit a Interchange</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>ID</label>
+                                <input type="text" class="form-control" name="id"
+                                       ng-model="interchange.id" readonly>
+                            </div>
+
+                            <div class="form-group">
+                                <label translate="seedbanksApp.interchange.score">Score</label>
+                                <input type="number" class="form-control" name="score"
+                                       ng-model="interchange.score">
+                            </div>
+                            <div class="form-group">
+                                <label translate="seedbanksApp.interchange.state">State</label>
+                                <input type="text" class="form-control" name="state"
+                                       ng-model="interchange.state">
+                            </div>
+
+                            <div class="form-group">
+                                <label translate="seedbanksApp.interchange.farmerReciever">farmerReciever</label>
+                                <select class="form-control" name="state" ng-model="interchange.farmerReciever.id" ng-options="user.id as user.login for user in users">
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label translate="seedbanksApp.interchange.harvest">harvest</label>
+                                <select class="form-control" name="state" ng-model="interchange.harvest.id" ng-options="harvest.id as harvest.id for harvest in harvests">
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                                <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                            </button>
+                            <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+	<div class="table-responsive">
+		<table class="table table-striped">
+		    <thead>
+		        <tr>
+		            <th>ID</th>
+		            <th translate="seedbanksApp.harvest.codeValidator">CodeValidator</th>
+		            <th translate="seedbanksApp.harvest.date">Date</th>
+		            <th translate="seedbanksApp.harvest.shared">Shared</th>
+		            <th translate="seedbanksApp.harvest.farmer">farmer</th>
+		            <th translate="seedbanksApp.harvest.mother">mother</th>
+		            <th translate="seedbanksApp.harvest.variety">variety</th>
+		            <th></th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr ng-repeat="harvest in harvests">
+		            <td><a ui-sref="harvestDetail({id:harvest.id})">{{harvest.id}}</a></td>
+		            <td>{{harvest.codeValidator}}</td>
+		            <td>{{harvest.date}}</td>
+		            <td>{{harvest.shared}}</td>
+		            <td>{{harvest.farmer.login}}</td>
+		            <td>{{harvest.mother.id}}</td>
+		            <td>{{harvest.variety.name}}</td>
+		            <td>
+		                <button type="submit"
+		                        ui-sref="harvestDetail({id:harvest.id})"
+		                        class="btn btn-info">
+		                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+		                </button>
+		                <button type="submit"
+		                        ng-click="update(harvest.id)"
+		                        class="btn btn-primary">
+		                    <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+		                </button>
+		                <button type="submit"
+		                        ng-click="delete(harvest.id)"
+		                        class="btn btn-danger">
+		                    <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+		                </button>
+                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveInterchangeModal" ng-click="clear(interchange.id)">
+                            <span class="glyphicon glyphicon-flash"></span> <span translate="seedbanksApp.interchange.home.createLabel">Interchange</span>
+                        </button>
+		            </td>
+		        </tr>
+		    </tbody>
+		</table>
+	    </div>
+
+
     </div>
 
     <button type="submit"
