@@ -47,7 +47,9 @@
                         <span translate="seedbanksApp.harvest.mother">mother</span>
                     </td>
                     <td>
-                        <input type="text" class="input-sm form-control" value="{{harvest.mother.id}}" readonly>
+                        <a ui-sref="harvestDetail({id:harvest.mother.id})">
+                            <span translate="seedbanksApp.harvest.detail.title">Harvest</span><span> {{harvest.mother.id}} (</span><span translate="seedbanksApp.harvest.seeDetails">see details</span><span>)</span>
+                        </a>
                     </td>
                 </tr>
                 <tr>
