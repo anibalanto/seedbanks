@@ -4,7 +4,8 @@
             "home": {
                 "title": "Interchanges",
                 "createLabel": "Create a new Interchange",
-                "createOrEditLabel": "Create or edit a Interchange"
+                "createOrEditLabel": "Create or edit a Interchange",
+                "calificate": "Calificate Interchange"
             },
             "delete": {
                 "question": "Are you sure you want to delete Interchange {{ id }}?"
@@ -15,7 +16,8 @@
             "score": "Score",
             "state": "State",
             "farmerReciever": "farmerReciever",
-            "harvest": "harvest"
+            "harvest": "harvest",
+            "calificate": "Calificate"
         }
     }
 }
