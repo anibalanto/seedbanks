@@ -85,10 +85,8 @@
 		            <th>ID</th>
 		            <th translate="seedbanksApp.harvest.codeValidator">CodeValidator</th>
 		            <th translate="seedbanksApp.harvest.date">Date</th>
-		            <th translate="seedbanksApp.harvest.shared">Shared</th>
-		            <th translate="seedbanksApp.harvest.farmer">farmer</th>
-		            <th translate="seedbanksApp.harvest.mother">mother</th>
-		            <th translate="seedbanksApp.harvest.variety">variety</th>
+		            <th translate="seedbanksApp.harvest.farmer">Farmer</th>
+                    <th translate="seedbanksApp.harvest.realability">Realability</th>
 		            <th></th>
 		        </tr>
 		    </thead>
@@ -97,28 +95,16 @@
 		            <td><a ui-sref="harvestDetail({id:harvest.id})">{{harvest.id}}</a></td>
 		            <td>{{harvest.codeValidator}}</td>
 		            <td>{{harvest.date}}</td>
-		            <td>{{harvest.shared}}</td>
 		            <td>{{harvest.farmer.login}}</td>
-		            <td>{{harvest.mother.id}}</td>
-		            <td>{{harvest.variety.name}}</td>
+                    <td>{{harvest.farmer.reliability}}</td>
 		            <td>
 		                <button type="submit"
 		                        ui-sref="harvestDetail({id:harvest.id})"
 		                        class="btn btn-info">
 		                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
 		                </button>
-		                <button type="submit"
-		                        ng-click="update(harvest.id)"
-		                        class="btn btn-primary">
-		                    <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
-		                </button>
-		                <button type="submit"
-		                        ng-click="delete(harvest.id)"
-		                        class="btn btn-danger">
-		                    <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
-		                </button>
-                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveInterchangeModal" ng-click="clear(interchange.id)">
-                            <span class="glyphicon glyphicon-flash"></span> <span translate="seedbanksApp.interchange.home.createLabel">Interchange</span>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#saveInterchangeModal" ng-click="clear(interchange.id)">
+                            <span class="glyphicon glyphicon-flash"></span> <span translate="seedbanksApp.interchange.detail.title">Interchange</span>
                         </button>
 		            </td>
 		        </tr>
