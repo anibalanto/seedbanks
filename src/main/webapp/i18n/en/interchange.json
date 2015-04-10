@@ -15,8 +15,8 @@
             },
             "score": "Score",
             "state": "State",
-            "farmerReciever": "farmerReciever",
-            "harvest": "harvest",
+            "farmerReciever": "Farmer Receiver",
+            "harvest": "Harvest",
             "calificate": "Calificate"
         }
     }

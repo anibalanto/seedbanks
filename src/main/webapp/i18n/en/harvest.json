@@ -15,10 +15,10 @@
             "codeValidator": "CodeValidator",
             "date": "Date",
             "shared": "Shared",
-            "farmer": "farmer",
-            "mother": "mother",
-            "interchange": "interchange",
-            "variety": "variety"
+            "farmer": "Farmer",
+            "mother": "Mother",
+            "interchange": "Interchange",
+            "variety": "Variety"
         }
     }
 }
