@@ -5,8 +5,11 @@ angular.module('seedbanksApp')
         $scope.harvest = {};
         $scope.load = function (id) {
             Harvest.get({id: id}, function(result) {
-              $scope.harvest = result;
+                $scope.harvest = result;
             });
-        };
+            Harvest.query({id:id, verb:'interchanges'}, function(result) {
+                $scope.interchanges = result;
+            });
+        }
         $scope.load($stateParams.id);
     });

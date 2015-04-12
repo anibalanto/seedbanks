@@ -2,7 +2,9 @@ package org.communityfarmer.seedbanks.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import org.communityfarmer.seedbanks.domain.Harvest;
+import org.communityfarmer.seedbanks.domain.Interchange;
 import org.communityfarmer.seedbanks.repository.HarvestRepository;
+import org.communityfarmer.seedbanks.repository.InterchangeRepository;
 import org.communityfarmer.seedbanks.repository.UserRepository;
 import org.communityfarmer.seedbanks.security.SecurityUtils;
 import org.slf4j.Logger;
@@ -30,6 +32,9 @@ public class HarvestResource {
 
     @Inject
     private UserRepository userRepository;
+
+    @Inject
+    private InterchangeRepository interchangeRepository;
 
     /**
      * POST  /harvests -> Create a new harvest.
@@ -72,6 +77,19 @@ public class HarvestResource {
         }
         return new ResponseEntity<>(harvest, HttpStatus.OK);
     }
+
+    /**
+     * GET  /harvests/:id -> get the interchanges of the "id" variety.
+     */
+    @RequestMapping(value = "/harvests/{id}/interchanges",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public List<Interchange> getInterchangesByHarvest(@PathVariable Long id, HttpServletResponse response) {
+        log.debug("REST request to get Interchanges by Harvest");
+        return interchangeRepository.findAllByHarvestId(id);
+    }
+
 
     /**
      * DELETE  /harvests/:id -> delete the "id" harvest.
