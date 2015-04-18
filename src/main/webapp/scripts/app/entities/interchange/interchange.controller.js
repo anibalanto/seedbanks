@@ -59,8 +59,9 @@ angular.module('seedbanksApp')
                     $scope.clear();
                 });
         };
-
-        $scope.clear = function () {
-            $scope.interchange = {score: null, state: null, id: null};
+        $scope.clear = function (harvestId) {
+            $scope.interchange = {score: null, state: null, id: null, harvest: harvestId, farmerReciever: 1};
         };
     });
+
+

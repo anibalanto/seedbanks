@@ -35,27 +35,10 @@
                             <h4 class="modal-title" id="myInterchangeLabel" translate="seedbanksApp.interchange.home.createOrEditLabel">Create or edit a Interchange</h4>
                         </div>
                         <div class="modal-body">
-                            <div class="form-group">
-                                <label>ID</label>
-                                <input type="text" class="form-control" name="id"
-                                       ng-model="interchange.id" readonly>
-                            </div>
-
-                            <div class="form-group">
-                                <label translate="seedbanksApp.interchange.score">Score</label>
-                                <input type="number" class="form-control" name="score"
-                                       ng-model="interchange.score">
-                            </div>
-                            <div class="form-group">
-                                <label translate="seedbanksApp.interchange.state">State</label>
-                                <input type="text" class="form-control" name="state"
-                                       ng-model="interchange.state">
-                            </div>
 
                             <div class="form-group">
                                 <label translate="seedbanksApp.interchange.farmerReciever">farmerReciever</label>
-                                <select class="form-control" name="state" ng-model="interchange.farmerReciever.id" ng-options="user.id as user.login for user in users">
-                                </select>
+                                <input type="text" class="form-control" name="state" ng-model="account.login" readonly>
                             </div>
                             <div class="form-group">
                                 <label translate="seedbanksApp.interchange.harvest">harvest</label>
@@ -103,7 +86,7 @@
 		                        class="btn btn-info">
 		                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
 		                </button>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#saveInterchangeModal" ng-click="clear(interchange.id)">
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#saveInterchangeModal" ng-click="clear(harvest.id)">
                             <span class="glyphicon glyphicon-flash"></span> <span translate="seedbanksApp.interchange.detail.title">Interchange</span>
                         </button>
 		            </td>

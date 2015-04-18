@@ -1,7 +1,11 @@
 'use strict';
 
 angular.module('seedbanksApp')
-    .controller('VarietyDetailController', function ($scope, $stateParams, Variety, Harvest) {
+    .controller('VarietyDetailController', function ($scope, $stateParams, Principal, Variety, Harvest) {
+
+        Principal.identity().then(function(account) {
+            $scope.account = account;
+        });
         $scope.variety = {};
         $scope.load = function (id) {
 	    Variety.get({id: id}, function(result) {
