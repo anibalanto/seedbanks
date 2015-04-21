@@ -46,4 +46,5 @@ angular.module('seedbanksApp')
         $scope.clear = function () {
             $scope.variety = {name: null, id: null};
         };
+
     });
