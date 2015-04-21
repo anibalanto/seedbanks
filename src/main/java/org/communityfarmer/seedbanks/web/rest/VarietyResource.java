@@ -81,7 +81,7 @@ public class VarietyResource {
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
     public List<Harvest> getHarvestsByVariety(@PathVariable Long id, HttpServletResponse response) {
-        log.debug("REST request to get Harvests shareds by Variety");
+        log.debug("REST request to get Harvests shared by Variety");
         return harvestRepository.findAllByVarietyIdAndSharedIsTrue(id);
     }
 

@@ -15,11 +15,13 @@
             "codeValidator": "CodeValidator",
             "date": "Date",
             "shared": "Shared",
-            "farmer": "farmer",
-            "mother": "mother",
-            "interchange": "interchange",
-            "variety": "variety",
-            "realability": "realability"
+            "farmer": "Farmer",
+            "mother": "Mother",
+            "interchange": "Interchange",
+            "variety": "Variety",
+            "seeDetails": "See details",
+            "realability": "Realability",
+            "harvestsof": "Harvests of"
         }
     }
 }

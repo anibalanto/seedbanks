@@ -2,7 +2,7 @@
 
 angular.module('seedbanksApp')
     .factory('Harvest', function ($resource) {
-        return $resource('api/harvests/:id', {}, {
+        return $resource('api/harvests/:id/:verb', {}, {
             'query': { method: 'GET', isArray: true},
             'get': {
                 method: 'GET',
