@@ -1,7 +1,7 @@
 {
     "main": {
-        "title": "Welcome, Java Hipster!",
-        "subtitle": "This is your homepage",
+        "title": "Welcome, Live Seed Banks!",
+        "subtitle": "Share to Grow",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },
